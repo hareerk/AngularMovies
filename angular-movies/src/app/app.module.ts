@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
@@ -41,7 +41,13 @@ import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
 import { DisplayErrorsComponent } from './utilities/display-errors/display-errors.component';
-import { MovieDetailsComponent } from './movies/movie-details/movie-details.component'
+import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
+import { AuthorizeViewComponent } from './security/authorize-view/authorize-view.component';
+import { LoginComponent } from './security/login/login.component';
+import { RegisterComponent } from './security/register/register.component';
+import { AuthenticationFormComponent } from './security/authentication-form/authentication-form.component'
+import { JwtInterceptorService } from './security/jwt-interceptor.service';
+import { UsersIndexComponent } from './security/users-index/users-index.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +79,12 @@ import { MovieDetailsComponent } from './movies/movie-details/movie-details.comp
     MultipleSelectorComponent,
     ActorsAutocompleteComponent,
     DisplayErrorsComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    AuthorizeViewComponent,
+    LoginComponent,
+    RegisterComponent,
+    AuthenticationFormComponent,
+    UsersIndexComponent
     
   ],
   imports: [
@@ -88,7 +99,11 @@ import { MovieDetailsComponent } from './movies/movie-details/movie-details.comp
     MarkdownModule.forRoot(),
     SweetAlert2Module.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

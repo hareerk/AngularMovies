@@ -71,3 +71,8 @@ C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\NetTopo
 C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
 C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\44775\source\AngularMovies\MoviesAPI\MoviesAPI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
